@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	@font-face {
+	    font-family: myFirstFont;
+	    src: url(Aaargh.ttf);
+	}
+	div {
+	    font-family: myFirstFont;
+	}
+
+	div.xyz{
+		background-color: #efefef;
+	}
+/*	div {
+		width: 300px;
+		height: 100px;
+		border: 50px;
+		padding: 60px;
+		margin: 40px;
+	}*/
+
+
+	.fragment {
+    font-size: 12px;
+    font-family: tahoma;
+    height: 140px;
+    border: 1px solid #ccc;
+    color: #555;
+    display: block;
+    padding: 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.fragment:hover {
+    box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+
+}
+
+.fragment img { 
+    float: left;
+    margin-right: 10px;
+}
+
+
+.fragment h3 {
+    padding: 0;
+    margin: 0;
+    color: #369;
+}
+.fragment h4 {
+    padding: 0;
+    margin: 0;
+    color: #000;
+}
+#close {
+    float:right;
+    display:inline-block;
+    padding:2px 5px;
+    background:#ccc;
+}
+
+#close:hover {
+        float:right;
+        display:inline-block;
+        padding:2px 5px;
+        background:#ccc;
+    color:#fff;
+    }
+
+</style>
+
+
+<script>
+	function myFunction() {
+		var x = document.getElementsByClassName("xyz");
+		var i;
+		for (i = 0; i < x.length; i++) {
+		    x[i].style.backgroundColor = "red";
+		}
+	}
+	window.onload = function(){
+    document.getElementById('close').onclick = function(){
+        this.parentNode.parentNode.parentNode
+        .removeChild(this.parentNode.parentNode);
+        return false;
+    };
+};
+</script>
+
+
+</head>
+
+<body>
+	<div class="xyz">
+		<h4>Name:Sumit</h4>
+		<h4>Date of Interview:23 Aug</h4>
+	</div>
+
+	<button type="button" onclick="myFunction()">Change Background</button>
+	
+	<div class="xyz"></div>
+		
+	<br /><br />
+	<a class="fragment" href="google.com">
+	    <div>
+	        <span id='close'>x</span>
+	    <img src ="http://placehold.it/116x116" alt="some description"/> 
+	    <h3>the title will go here</h3>
+	        <h4> www.myurlwill.com </h4>
+	    <p class="text">
+	        this is a short description yada yada peanuts etc this is a short description yada yada peanuts etc this is a short description yada yada peanuts etc this is a short description yada yada peanuts etcthis is a short description yada yada peanuts etc 
+	    </p>
+	</div>
+	</a>
+	
+	<div class="content">
+		<p>Some Content Here</p>
+		<p class="loader">
+		<span>Click Me</span>
+		<img src="ajax-loader.gif">
+		</p>
+	</div>
+
+</body>
+</html> 
+
